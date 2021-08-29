@@ -6,8 +6,8 @@
 import UIKit
 import Combine
 
-final class ANFExploreCardTableViewController: UITableViewController, Bindable {
-  
+final class ANFExploreCardTableViewController: UITableViewController, Bindable, Lodable {
+  var loader: UIActivityIndicatorView?
   private(set) var viewModel: ANFExploreCardViewModel! = ANFExploreCardViewModel()
   var subscribers: Set<AnyCancellable> = []
   
@@ -18,6 +18,7 @@ final class ANFExploreCardTableViewController: UITableViewController, Bindable {
   override func viewDidLoad() {
     super.viewDidLoad()
     setupSubscribers()
+    showLoader()
     viewModel.fetchProducts()
   }
   
@@ -25,9 +26,31 @@ final class ANFExploreCardTableViewController: UITableViewController, Bindable {
     viewModel.$dataSource
       .receive(on: DispatchQueue.main)
       .sink { [weak self] _ in
+        self?.dismissLoader()
         self?.tableView.reloadData()
       }
       .store(in: &subscribers)
+    viewModel.$error
+      .receive(on: DispatchQueue.main)
+      .compactMap {$0}
+      .sink { [weak self] _ in
+      self?.dismissLoader()
+        self?.showGenericError()
+    }
+    .store(in: &subscribers)
+    NotificationCenter
+               .Publisher(center: .default,
+                          name: UIApplication.willEnterForegroundNotification)
+               .sink { [weak self] _ in
+                self?.viewModel?.fetchProducts()
+               }
+               .store(in: &subscribers)
+  }
+  
+  private func showGenericError() {
+    let alert = UIAlertController(title: "Error", message: "Something went wrong please try again later", preferredStyle: .alert)
+    alert.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
+    present(alert, animated: true, completion: nil)
   }
   
   override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

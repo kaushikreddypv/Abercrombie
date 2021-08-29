@@ -16,6 +16,7 @@ class ANFExploreCardTableViewControllerTests: XCTestCase {
   
   override func setUp() {
     testInstance = UIStoryboard(name: "Main", bundle: Bundle.main).instantiateInitialViewController() as? ANFExploreCardTableViewController
+    testInstance.set(ANFExploreCardViewModel(exploreService: ExploreServiceImplementation(serviceConfiguration: ServiceConfiguration(environment: .mock))))
     subscribe = testInstance.viewModel.$dataSource
       .receive(on: DispatchQueue.main)
       .sink(receiveValue: { [weak self] _ in

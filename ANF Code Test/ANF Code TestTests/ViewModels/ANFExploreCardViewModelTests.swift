@@ -15,7 +15,7 @@ class ANFExploreCardViewModelTests: XCTestCase {
   var subscribe: AnyCancellable?
   
   override func setUp() {
-    testInstance = ANFExploreCardViewModel()
+    testInstance = ANFExploreCardViewModel(exploreService: ExploreServiceImplementation(serviceConfiguration: ServiceConfiguration(environment: .mock)))
     subscribe = testInstance.$dataSource
       .receive(on: DispatchQueue.main)
       .sink(receiveValue: { [weak self] _ in

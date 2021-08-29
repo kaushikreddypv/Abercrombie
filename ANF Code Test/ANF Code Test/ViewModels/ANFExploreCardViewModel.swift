@@ -12,17 +12,18 @@ final class ANFExploreCardViewModel: ViewModel {
   @Published var dataSource: [ExploreCardCellModel] = []
   private var exploreService: ExploreService
   private var exploreCancellable: AnyCancellable?
+  @Published var error: ANFError?
   
-  init(exploreService: ExploreService = MockExploreService()) {
+  init(exploreService: ExploreService = ExploreServiceImplementation()) {
     self.exploreService = exploreService
   }
   
   func fetchProducts() {
     exploreCancellable = exploreService.fetchExploreItems()
       .receive(on: DispatchQueue.main)
-      .sink(receiveCompletion: { result in
+      .sink(receiveCompletion: { [weak self] result in
         guard case .failure(let error) = result else { return }
-        print(error)
+        self?.error = error
       }) { [weak self] products in
         self?.prepareDataSource(products)
       }

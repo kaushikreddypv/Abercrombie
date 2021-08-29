@@ -7,7 +7,16 @@
 
 import Foundation
 
-
 enum Segues: String {
   case cardDetails
+}
+
+enum JSONKeys {
+  static let contentType = "Content-Type"
+  static let acceptType = "Accept"
+  static let acceptEncoding = "Accept-Encoding"
+}
+
+enum ContentType {
+  static let json = "application/json"
 }

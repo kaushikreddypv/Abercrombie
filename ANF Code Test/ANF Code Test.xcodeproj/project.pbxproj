@@ -3,10 +3,13 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		134A1DF826D9EA2700248E6E /* ServiceConfigurationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 134A1DF726D9EA2700248E6E /* ServiceConfigurationTests.swift */; };
+		134A1DFA26D9EB3D00248E6E /* ExploreServiceImplementation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 134A1DF926D9EB3D00248E6E /* ExploreServiceImplementation.swift */; };
+		134A1DFC26D9EE3400248E6E /* Result+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 134A1DFB26D9EE3400248E6E /* Result+Extension.swift */; };
 		1368620026D9645500C26029 /* CardDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 136861FF26D9645500C26029 /* CardDetailsViewController.swift */; };
 		1368620226D964F200C26029 /* CardDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1368620126D964F200C26029 /* CardDetailsViewModel.swift */; };
 		1368620426D985B100C26029 /* ANFExploreCardViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1368620326D985B100C26029 /* ANFExploreCardViewModelTests.swift */; };
@@ -15,6 +18,16 @@
 		1368620B26D999A900C26029 /* CardDetailsViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1368620A26D999A900C26029 /* CardDetailsViewModelTests.swift */; };
 		1368620D26D99C2400C26029 /* ExploreCardTableViewCellTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1368620C26D99C2400C26029 /* ExploreCardTableViewCellTests.swift */; };
 		1368620F26D9A8B000C26029 /* CardDetailsViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1368620E26D9A8B000C26029 /* CardDetailsViewControllerTests.swift */; };
+		1368622C26D9B96900C26029 /* ANFError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1368621C26D9B96900C26029 /* ANFError.swift */; };
+		1368622F26D9B96900C26029 /* ServiceConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1368621F26D9B96900C26029 /* ServiceConfig.swift */; };
+		1368623026D9B96900C26029 /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1368622026D9B96900C26029 /* Service.swift */; };
+		1368623126D9B96900C26029 /* Config.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1368622126D9B96900C26029 /* Config.plist */; };
+		1368623226D9B96900C26029 /* ServiceConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1368622226D9B96900C26029 /* ServiceConfiguration.swift */; };
+		1368623326D9B96900C26029 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1368622326D9B96900C26029 /* Endpoint.swift */; };
+		1368623526D9BE1000C26029 /* Lodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1368623426D9BE1000C26029 /* Lodable.swift */; };
+		1368623B26D9D63000C26029 /* ServiceConfigTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1368623A26D9D63000C26029 /* ServiceConfigTests.swift */; };
+		1368623D26D9D86000C26029 /* MockConfig.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1368623C26D9D86000C26029 /* MockConfig.plist */; };
+		1368623F26D9D8D800C26029 /* NoEnvironments.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1368623E26D9D8D800C26029 /* NoEnvironments.plist */; };
 		13B0124C26D871ED0006B21D /* ANFExploreCardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13B0124B26D871ED0006B21D /* ANFExploreCardViewModel.swift */; };
 		13B0124F26D8727A0006B21D /* ExploreCardCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13B0124E26D8727A0006B21D /* ExploreCardCellModel.swift */; };
 		13B0125426D873460006B21D /* ExploreService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13B0125326D873460006B21D /* ExploreService.swift */; };
@@ -47,6 +60,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		134A1DF726D9EA2700248E6E /* ServiceConfigurationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceConfigurationTests.swift; sourceTree = "<group>"; };
+		134A1DF926D9EB3D00248E6E /* ExploreServiceImplementation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreServiceImplementation.swift; sourceTree = "<group>"; };
+		134A1DFB26D9EE3400248E6E /* Result+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Result+Extension.swift"; sourceTree = "<group>"; };
 		136861FF26D9645500C26029 /* CardDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardDetailsViewController.swift; sourceTree = "<group>"; };
 		1368620126D964F200C26029 /* CardDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardDetailsViewModel.swift; sourceTree = "<group>"; };
 		1368620326D985B100C26029 /* ANFExploreCardViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ANFExploreCardViewModelTests.swift; sourceTree = "<group>"; };
@@ -55,6 +71,16 @@
 		1368620A26D999A900C26029 /* CardDetailsViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardDetailsViewModelTests.swift; sourceTree = "<group>"; };
 		1368620C26D99C2400C26029 /* ExploreCardTableViewCellTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreCardTableViewCellTests.swift; sourceTree = "<group>"; };
 		1368620E26D9A8B000C26029 /* CardDetailsViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardDetailsViewControllerTests.swift; sourceTree = "<group>"; };
+		1368621C26D9B96900C26029 /* ANFError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ANFError.swift; sourceTree = "<group>"; };
+		1368621F26D9B96900C26029 /* ServiceConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServiceConfig.swift; sourceTree = "<group>"; };
+		1368622026D9B96900C26029 /* Service.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
+		1368622126D9B96900C26029 /* Config.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Config.plist; sourceTree = "<group>"; };
+		1368622226D9B96900C26029 /* ServiceConfiguration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServiceConfiguration.swift; sourceTree = "<group>"; };
+		1368622326D9B96900C26029 /* Endpoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
+		1368623426D9BE1000C26029 /* Lodable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Lodable.swift; sourceTree = "<group>"; };
+		1368623A26D9D63000C26029 /* ServiceConfigTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceConfigTests.swift; sourceTree = "<group>"; };
+		1368623C26D9D86000C26029 /* MockConfig.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = MockConfig.plist; sourceTree = "<group>"; };
+		1368623E26D9D8D800C26029 /* NoEnvironments.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = NoEnvironments.plist; sourceTree = "<group>"; };
 		13B0124B26D871ED0006B21D /* ANFExploreCardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ANFExploreCardViewModel.swift; sourceTree = "<group>"; };
 		13B0124E26D8727A0006B21D /* ExploreCardCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreCardCellModel.swift; sourceTree = "<group>"; };
 		13B0125326D873460006B21D /* ExploreService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreService.swift; sourceTree = "<group>"; };
@@ -114,6 +140,51 @@
 			path = ViewModels;
 			sourceTree = "<group>";
 		};
+		1368621226D9B96900C26029 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				13B0125126D872F20006B21D /* Services */,
+				1368621326D9B96900C26029 /* Mocks */,
+				1368621C26D9B96900C26029 /* ANFError.swift */,
+				1368621F26D9B96900C26029 /* ServiceConfig.swift */,
+				1368622026D9B96900C26029 /* Service.swift */,
+				1368622126D9B96900C26029 /* Config.plist */,
+				1368622226D9B96900C26029 /* ServiceConfiguration.swift */,
+				1368622326D9B96900C26029 /* Endpoint.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		1368621326D9B96900C26029 /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				3E4AB9392676D86100C79456 /* exploreData.json */,
+			);
+			path = Mocks;
+			sourceTree = "<group>";
+		};
+		1368623826D9D55600C26029 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				3E727EE92672708B006C11AC /* ANFExploreCardTableViewControllerTests.swift */,
+				1368620C26D99C2400C26029 /* ExploreCardTableViewCellTests.swift */,
+				1368620E26D9A8B000C26029 /* CardDetailsViewControllerTests.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		1368623926D9D56400C26029 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				1368623C26D9D86000C26029 /* MockConfig.plist */,
+				1368623E26D9D8D800C26029 /* NoEnvironments.plist */,
+				1368623A26D9D63000C26029 /* ServiceConfigTests.swift */,
+				134A1DF726D9EA2700248E6E /* ServiceConfigurationTests.swift */,
+				134A1DF926D9EB3D00248E6E /* ExploreServiceImplementation.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
 		13B0124D26D872680006B21D /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
@@ -156,6 +227,7 @@
 			children = (
 				13B0125C26D883B20006B21D /* Extensions */,
 				13B0125A26D883A80006B21D /* Constant.swift */,
+				1368623426D9BE1000C26029 /* Lodable.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -164,6 +236,7 @@
 			isa = PBXGroup;
 			children = (
 				13B0125D26D883C00006B21D /* Collection+Extension.swift */,
+				134A1DFB26D9EE3400248E6E /* Result+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -205,14 +278,13 @@
 				13B0125026D872DA0006B21D /* Views */,
 				13B0124D26D872680006B21D /* ViewModels */,
 				13B0125226D873050006B21D /* Model */,
-				13B0125126D872F20006B21D /* Services */,
+				1368621226D9B96900C26029 /* Network */,
 				3E727ED226727088006C11AC /* AppDelegate.swift */,
 				3E727ED426727088006C11AC /* SceneDelegate.swift */,
 				3E727ED826727088006C11AC /* Main.storyboard */,
 				3E727EDB2672708B006C11AC /* Assets.xcassets */,
 				3E727EDD2672708B006C11AC /* LaunchScreen.storyboard */,
 				3E727EE02672708B006C11AC /* Info.plist */,
-				3E4AB9392676D86100C79456 /* exploreData.json */,
 			);
 			path = "ANF Code Test";
 			sourceTree = "<group>";
@@ -220,11 +292,10 @@
 		3E727EE82672708B006C11AC /* ANF Code TestTests */ = {
 			isa = PBXGroup;
 			children = (
-				3E727EE92672708B006C11AC /* ANFExploreCardTableViewControllerTests.swift */,
-				1368620C26D99C2400C26029 /* ExploreCardTableViewCellTests.swift */,
-				1368620E26D9A8B000C26029 /* CardDetailsViewControllerTests.swift */,
-				3E727EEB2672708B006C11AC /* Info.plist */,
+				1368623926D9D56400C26029 /* Network */,
+				1368623826D9D55600C26029 /* Views */,
 				1368620526D985B800C26029 /* ViewModels */,
+				3E727EEB2672708B006C11AC /* Info.plist */,
 			);
 			path = "ANF Code TestTests";
 			sourceTree = "<group>";
@@ -246,7 +317,6 @@
 				5D46FC5681A0A0DC86769002 /* Pods-ANF Code TestTests.debug.xcconfig */,
 				E10250A4EF82E086FB7ADB7A /* Pods-ANF Code TestTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -337,6 +407,7 @@
 				3E727EDC2672708B006C11AC /* Assets.xcassets in Resources */,
 				3E727EDA26727088006C11AC /* Main.storyboard in Resources */,
 				3E4AB93A2676D86100C79456 /* exploreData.json in Resources */,
+				1368623126D9B96900C26029 /* Config.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -344,6 +415,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1368623D26D9D86000C26029 /* MockConfig.plist in Resources */,
+				1368623F26D9D8D800C26029 /* NoEnvironments.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -418,6 +491,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1368622C26D9B96900C26029 /* ANFError.swift in Sources */,
 				3E727F03267281F7006C11AC /* ANFExploreCardTableViewController.swift in Sources */,
 				13B0125E26D883C00006B21D /* Collection+Extension.swift in Sources */,
 				13B0126326D884200006B21D /* Bindable.swift in Sources */,
@@ -427,12 +501,18 @@
 				1368620026D9645500C26029 /* CardDetailsViewController.swift in Sources */,
 				1368620226D964F200C26029 /* CardDetailsViewModel.swift in Sources */,
 				1368620926D998EC00C26029 /* Content.swift in Sources */,
+				1368622F26D9B96900C26029 /* ServiceConfig.swift in Sources */,
 				3E727ED326727088006C11AC /* AppDelegate.swift in Sources */,
+				134A1DFC26D9EE3400248E6E /* Result+Extension.swift in Sources */,
 				13B0124F26D8727A0006B21D /* ExploreCardCellModel.swift in Sources */,
 				13B0124C26D871ED0006B21D /* ANFExploreCardViewModel.swift in Sources */,
+				1368623026D9B96900C26029 /* Service.swift in Sources */,
+				1368623526D9BE1000C26029 /* Lodable.swift in Sources */,
 				13B0125826D87BA70006B21D /* ExploreCardTableViewCell.swift in Sources */,
 				3E727ED526727088006C11AC /* SceneDelegate.swift in Sources */,
 				13B0125626D873AB0006B21D /* Product.swift in Sources */,
+				1368623326D9B96900C26029 /* Endpoint.swift in Sources */,
+				1368623226D9B96900C26029 /* ServiceConfiguration.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -441,10 +521,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				1368620D26D99C2400C26029 /* ExploreCardTableViewCellTests.swift in Sources */,
+				1368623B26D9D63000C26029 /* ServiceConfigTests.swift in Sources */,
 				1368620F26D9A8B000C26029 /* CardDetailsViewControllerTests.swift in Sources */,
 				1368620426D985B100C26029 /* ANFExploreCardViewModelTests.swift in Sources */,
 				1368620B26D999A900C26029 /* CardDetailsViewModelTests.swift in Sources */,
 				1368620726D9971400C26029 /* ExploreCardCellModelTests.swift in Sources */,
+				134A1DF826D9EA2700248E6E /* ServiceConfigurationTests.swift in Sources */,
+				134A1DFA26D9EB3D00248E6E /* ExploreServiceImplementation.swift in Sources */,
 				3E727EEA2672708B006C11AC /* ANFExploreCardTableViewControllerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

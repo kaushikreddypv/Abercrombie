@@ -7,6 +7,7 @@ target 'ANF Code Test' do
 
   # Pods for ANF Code Test
   pod 'Alamofire'
+  pod 'AlamofireImage'
 
   target 'ANF Code TestTests' do
     inherit! :search_paths

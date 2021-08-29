@@ -30,14 +30,23 @@ final class CardDetailsViewController: UIViewController, Bindable {
   
   private func configureUI() {
     if let image = UIImage(named: viewModel.imageName) {
-      imageView.heightAnchor.constraint(equalToConstant: viewModel.calucualteHeightConstraint(size: image.size, newWidth: imageView.bounds.width)).isActive = true
+      imageView.image = image
+      configureImageHeightConstraint(image: image)
+    } else if let url = URL(string: viewModel.imageName) {
+      imageView.af.setImage(withURL: url, completion: { [weak self] response in
+        guard let image = response.value else { return }
+        self?.configureImageHeightConstraint(image: image)
+      })
     }
-    imageView.image = UIImage(named: viewModel.imageName)
     titleLabel.text = viewModel.title
     topDescription.text = viewModel.topDescription
     promoMessage.text = viewModel.promoMessage
     bottomDescription.text = viewModel.bottomDescription
     configureButtons()
+  }
+  
+  private func configureImageHeightConstraint(image: UIImage) {
+    imageView.heightAnchor.constraint(equalToConstant: viewModel.calucualteHeightConstraint(size: image.size, newWidth: imageView.bounds.width)).isActive = true
   }
   
   private func configureButtons() {

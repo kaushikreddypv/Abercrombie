@@ -7,6 +7,7 @@
 
 import UIKit
 import Combine
+import AlamofireImage
 
 final class ExploreCardTableViewCell: UITableViewCell, Bindable {
   static let identifier = "exploreContentCell"
@@ -22,8 +23,17 @@ final class ExploreCardTableViewCell: UITableViewCell, Bindable {
     configureUI()
   }
   
+  override func prepareForReuse() {
+    super.prepareForReuse()
+    productImage?.af.cancelImageRequest()
+  }
+  
   private func configureUI() {
     title?.text = viewModel?.title
-    productImage?.image = UIImage(named: viewModel?.imageName ?? "")
+    guard let url = URL(string: viewModel.imageName), viewModel.imageName.hasPrefix("http") else {
+      productImage?.image = UIImage(named: viewModel.imageName)
+      return
+    }
+    productImage?.af.setImage(withURL: url)
   }
 }

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>environments</key>
+	<dict>
+		<key>dev</key>
+		<string>https://www.abercrombie.com/anf/nativeapp/qa/codetest</string>
+		<key>prod</key>
+		<string>https://www.abercrombie.com/anf/nativeapp/codetest/</string>
+	</dict>
+</dict>
+</plist>
