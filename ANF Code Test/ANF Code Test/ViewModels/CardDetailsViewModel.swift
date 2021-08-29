@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import CoreGraphics
 
 final class CardDetailsViewModel: ViewModel {
   let product: Product
@@ -36,5 +37,10 @@ final class CardDetailsViewModel: ViewModel {
   
   init(product: Product) {
     self.product = product
+  }
+  
+  func calucualteHeightConstraint(size: CGSize, newWidth: CGFloat) -> CGFloat {
+    guard size.width > 0 else { return 0 }
+    return (newWidth * size.height) / size.width
   }
 }

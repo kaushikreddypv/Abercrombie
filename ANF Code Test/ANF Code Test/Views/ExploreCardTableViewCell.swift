@@ -11,8 +11,8 @@ import Combine
 final class ExploreCardTableViewCell: UITableViewCell, Bindable {
   static let identifier = "exploreContentCell"
   
-  @IBOutlet private var title: UILabel!
-  @IBOutlet private var productImage: UIImageView!
+  @IBOutlet var title: UILabel!
+  @IBOutlet var productImage: UIImageView!
   
   private(set) var viewModel: ExploreCardCellModel!
   private(set) var subscribers: Set<AnyCancellable> = []

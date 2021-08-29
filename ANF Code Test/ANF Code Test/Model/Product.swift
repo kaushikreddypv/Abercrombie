@@ -16,8 +16,8 @@ struct Product: Codable {
   let bottomDescription: String?
 }
 
-struct Content: Codable {
-  let elementType: String?
-  let title: String
-  let target: String
+extension Product: Equatable {
+  static func == (lhs: Product, rhs: Product) -> Bool {
+    lhs.title == rhs.title && lhs.backgroundImage == rhs.backgroundImage
+  }
 }

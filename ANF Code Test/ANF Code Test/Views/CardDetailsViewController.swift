@@ -29,6 +29,9 @@ final class CardDetailsViewController: UIViewController, Bindable {
   }
   
   private func configureUI() {
+    if let image = UIImage(named: viewModel.imageName) {
+      imageView.heightAnchor.constraint(equalToConstant: viewModel.calucualteHeightConstraint(size: image.size, newWidth: imageView.bounds.width)).isActive = true
+    }
     imageView.image = UIImage(named: viewModel.imageName)
     titleLabel.text = viewModel.title
     topDescription.text = viewModel.topDescription
