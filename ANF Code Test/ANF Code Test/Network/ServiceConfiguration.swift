@@ -11,7 +11,7 @@ struct ServiceConfiguration {
   let serviceConfig: ServiceConfig
   let currentEnvi: Environment
   
-  init(environment: Environment = .mock) {
+  init(environment: Environment = .dev) {
     guard let serviceConfig = ServiceConfig(bundlePath: Bundle.main.path(forResource: "Config", ofType: "plist")) else {
       fatalError("Missing Config file")
     }
